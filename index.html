@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMC Brainrot Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>BMC Brainrot Clicker</h1>
+            <div class="score-display">
+                <span class="score-label">Points:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="click-power">
+                <span class="power-label">Power:</span>
+                <span id="clickPower">1</span>
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <div class="main-game">
+            <!-- Click Area -->
+            <div class="click-area">
+                <img id="clickImage" src="coach.png" alt="Coach" class="clickable-image">
+                <div id="clickEffect" class="click-effect"></div>
+            </div>
+
+            <!-- Upgrades Panel -->
+            <div class="upgrades-panel">
+                <h2>Upgrades</h2>
+                
+                <div class="upgrade-item" id="paulsUpgrade">
+                    <div class="upgrade-info">
+                        <h3>Paul's Fun Time</h3>
+                        <p class="upgrade-description">Increases click power by 1</p>
+                        <div class="upgrade-stats">
+                            <span class="owned">Owned: <span id="paulsOwned">0</span></span>
+                        </div>
+                    </div>
+                    <div class="upgrade-purchase">
+                        <div class="price">$<span id="paulsPrice">10</span></div>
+                        <button class="buy-button" onclick="buyUpgrade('pauls')">BUY</button>
+                    </div>
+                </div>
+
+                <div class="upgrade-item" id="biggsUpgrade">
+                    <div class="upgrade-info">
+                        <h3>Biggs Boost</h3>
+                        <p class="upgrade-description">Generates 2 points per second</p>
+                        <div class="upgrade-stats">
+                            <span class="owned">Owned: <span id="biggsOwned">0</span></span>
+                        </div>
+                    </div>
+                    <div class="upgrade-purchase">
+                        <div class="price">$<span id="biggsPrice">100</span></div>
+                        <button class="buy-button" onclick="buyUpgrade('biggs')">BUY</button>
+                    </div>
+                </div>
+
+                <!-- More upgrades can be added here -->
+                <div class="upgrade-item" id="megaUpgrade">
+                    <div class="upgrade-info">
+                        <h3>Mega Multiplier</h3>
+                        <p class="upgrade-description">Doubles all click power</p>
+                        <div class="upgrade-stats">
+                            <span class="owned">Owned: <span id="megaOwned">0</span></span>
+                        </div>
+                    </div>
+                    <div class="upgrade-purchase">
+                        <div class="price">$<span id="megaPrice">1000</span></div>
+                        <button class="buy-button" onclick="buyUpgrade('mega')">BUY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <h3>Statistics</h3>
+            <div class="stat-item">
+                <span>Total Clicks:</span>
+                <span id="totalClicks">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Points Per Second:</span>
+                <span id="pointsPerSecond">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
